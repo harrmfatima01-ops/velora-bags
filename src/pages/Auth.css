@@ -1,0 +1,76 @@
+.auth {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: linear-gradient(180deg, var(--ivory) 0%, var(--champagne) 100%);
+}
+
+.auth__card {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  padding: 36px 32px;
+}
+
+.auth__brand {
+  text-align: center;
+  margin: 0 0 18px;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--plum);
+}
+.auth__brand span { color: var(--rose-dark); }
+
+.auth__card h1 { text-align: center; font-size: 1.9rem; margin-bottom: 6px; }
+.auth__subtitle { text-align: center; color: #6b616d; margin-bottom: 22px; font-size: 0.95rem; }
+
+.auth__alert {
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+.auth__alert a { font-weight: 600; text-decoration: underline; }
+.auth__alert--info { background: var(--champagne); color: var(--plum); }
+.auth__alert--error { background: #f8dfe2; color: #7a1f2b; }
+
+.auth .form-field input[aria-invalid="true"] { border-color: #d9606f; }
+
+.auth__password { position: relative; display: flex; }
+.auth__password input { width: 100%; padding-right: 46px; }
+.auth__toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--plum);
+  cursor: pointer;
+}
+.auth__toggle:hover { background: var(--champagne); }
+
+.auth__submit { width: 100%; margin-top: 4px; }
+
+.auth__switch { text-align: center; margin: 20px 0 0; font-size: 0.92rem; }
+.auth__switch a { color: var(--plum); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.auth__switch a:hover { color: var(--rose-dark); }
+
+.auth__note { text-align: center; margin: 14px 0 0; font-size: 0.78rem; color: #6b616d; }
+
+@media (max-width: 480px) {
+  .auth__card { padding: 28px 20px; }
+}

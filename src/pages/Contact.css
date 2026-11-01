@@ -1,0 +1,39 @@
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact__form {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.contact__form .form-field input[aria-invalid="true"],
+.contact__form .form-field textarea[aria-invalid="true"] { border-color: #d9606f; }
+.contact__form textarea { resize: vertical; }
+
+.contact__success {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  background: #e6ecdf;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: #35502c;
+}
+
+.contact__details {
+  background: var(--champagne);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.contact__placeholder-note { font-size: 0.82rem; color: #6b616d; }
+.contact__details ul { display: flex; flex-direction: column; gap: 16px; }
+.contact__details li { display: flex; gap: 12px; align-items: flex-start; }
+.contact__details svg { flex-shrink: 0; margin-top: 3px; color: var(--rose-dark); }
+
+@media (max-width: 860px) {
+  .contact__layout { grid-template-columns: 1fr; }
+}

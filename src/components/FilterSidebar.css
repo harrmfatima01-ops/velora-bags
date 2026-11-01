@@ -1,0 +1,66 @@
+.filter-sidebar {
+  background: var(--champagne);
+  border-radius: var(--radius);
+  padding: 22px;
+  align-self: start;
+}
+
+/* The mobile toggle button is hidden on desktop */
+.filter-sidebar__toggle { display: none; width: 100%; }
+
+.filter-group {
+  border: none;
+  border-top: 1px solid var(--border);
+  padding: 16px 0 6px;
+  margin: 0 0 6px;
+}
+.filter-group legend {
+  padding: 0;
+  float: left;      /* keeps the legend inside the fieldset flow */
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--plum);
+}
+.filter-group legend + * { clear: both; }
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+.filter-option input { width: 17px; height: 17px; accent-color: var(--plum); cursor: pointer; }
+
+.filter-price { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.filter-price .form-field { margin-bottom: 8px; }
+
+.filter-sidebar .form-field select { background: var(--ivory); }
+
+.filter-sidebar__reset { width: 100%; margin-top: 12px; }
+
+@media (max-width: 860px) {
+  .filter-sidebar__toggle { display: inline-flex; }
+  .filter-sidebar__panel { display: none; margin-top: 16px; }
+  .filter-sidebar__panel--open { display: block; }
+}
+/* Let fieldsets and inputs shrink to fit the sidebar */
+.filter-group {
+  min-width: 0;
+}
+
+.filter-price .form-field {
+  min-width: 0;
+}
+
+.filter-sidebar input[type="number"] {
+  width: 100%;
+  min-width: 0;
+}
+
+.filter-sidebar {
+  min-width: 0;
+}

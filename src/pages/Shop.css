@@ -1,0 +1,31 @@
+.shop__layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.shop__count {
+  margin: 0 0 18px;
+  font-size: 0.92rem;
+  color: #6b616d;
+}
+
+/* Inside the Shop page the grid has less room, so use 3 columns at most */
+.shop__content .product-grid { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 1100px) {
+  .shop__content .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .shop__layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 380px) {
+  .shop__content .product-grid { grid-template-columns: 1fr; }
+}
+.shop__layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
